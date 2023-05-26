@@ -18,13 +18,14 @@ export default async function Home() {
 if (draftMode().isEnabled){
   return (<PreviewSuspense fallback={(
     <div role="status">
-        <p className='text-center text-lg animate-pulse text-blue-400'>Loading...</p>
+        <p className='text-center text-lg animate-pulse text-blue-400'>Loading Previews...</p>
       </div>
   )}>
     <PreviewBlogList query={query}/>
   </PreviewSuspense>
   )
 };
+
 const posts = await client.fetch(query);
   return(
     <div>

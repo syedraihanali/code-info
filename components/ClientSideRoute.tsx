@@ -15,4 +15,4 @@ function ClientSideRoute({
   )
 }
 
-export default ClientSideRoute
+export default ClientSideRoute;

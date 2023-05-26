@@ -23,6 +23,7 @@ interface Author extends Base {
     slug: Slug;
 }
 interface Image {
+    alt: string;
     _type: "image";
     asset: Reference;
 }
