@@ -14,7 +14,7 @@ function Header() {
 
 
         <div>
-            <Link href="https://syedraihanali.top" target="_blank" className="hidden px-5 py-3 text-sm md:text-base bg-gray-900 text-[#0071ff] md:flex items-center rounded-full text-center hover:text-blue-400 hover:scale-105 transition-all">
+            <Link href="https://syedraihanali.top" target="_blank" className=" px-5 py-3 text-sm md:text-base bg-gray-900 text-[#0071ff] flex items-center rounded-full text-center hover:text-blue-400 hover:scale-105 transition-all">
                 Visit My Website
             </Link>
         </div>
