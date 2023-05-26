@@ -3,7 +3,7 @@
  */
 
 import {visionTool} from '@sanity/vision'
-import { defineConfig} from 'sanity'
+import { DefaultDocument, defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
 import StudioNavbar from './components/StudioNavbar'
 
@@ -11,6 +11,7 @@ import StudioNavbar from './components/StudioNavbar'
 import {apiVersion, dataset, projectId} from './sanity/env'
 import {schema} from './sanity/schema'
 import { myTheme } from './theme'
+import { getDefaultDocumentNode } from './structure'
 
 export default defineConfig({
   basePath: '/studio',
@@ -26,9 +27,7 @@ export default defineConfig({
     }
   },
   plugins: [
-    deskTool(),
-    // Vision is a tool that lets you query your content with GROQ in the studio
-    // https://www.sanity.io/docs/the-vision-plugin
+    deskTool({defaultDocumentNode: getDefaultDocumentNode}),
     visionTool({defaultApiVersion: apiVersion}),
   ],
   theme: myTheme,
