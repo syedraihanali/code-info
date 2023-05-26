@@ -1,4 +1,5 @@
 import Header from '@/components/Header'
+import { Analytics } from '@vercel/analytics/react';
 import '../globals.css'
 import Banner from '@/components/Banner'
 
@@ -17,7 +18,9 @@ export default function RootLayout({
       <body className='max-w-7xl mx-auto'>
         <Header/>
         <Banner/>
-        {children}</body>
+        {children}
+        <Analytics />
+        </body>
     </html>
   )
 }
