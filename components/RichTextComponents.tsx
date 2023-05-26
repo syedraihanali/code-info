@@ -3,8 +3,8 @@ import Link from "next/link";
 import urlFor from '../sanity/lib/urlFor';
 
 export const RichTextComponents = {
-    type:{
-        image: ({value}:any)=>{
+    types:{
+        image: ({ value }: any)=>{
             return (
                 <div className="relative w-full h-96 m-10 mx-auto">
                     <Image className="object-contain" src={urlFor(value).url()} alt="blog image" fill />
